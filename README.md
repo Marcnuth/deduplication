@@ -18,6 +18,12 @@ python -m spacy download en_core_web_sm
 
 __SimHash__
 
+```python
+from deduplication import simhash
+
+hashvalue1 = simhash('this is text')
+hashvalue2 = simhash('this is another text', n_block=4)
+```
 
 ## Citation
 

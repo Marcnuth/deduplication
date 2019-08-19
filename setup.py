@@ -19,7 +19,7 @@ setup(
 
     license="Apache License 2.0",
 
-    description="Remove duplicate documents via popular algorithms such as SimHash, SpotSig, Shingliing, etc.",
+    description="Remove duplicate documents via popular algorithms such as SimHash, SpotSig, Shingling, etc.",
     long_description=read_file('README.md', lambda f: f.read()),
     long_description_content_type='text/markdown',
     install_requires=read_file('requirements.txt', lambda f: list(filter(bool, map(str.strip, f)))),

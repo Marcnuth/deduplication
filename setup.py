@@ -29,3 +29,4 @@ setup(
         'Topic :: Software Development :: Libraries',
         'Programming Language :: Python :: 3'
     ]
+)

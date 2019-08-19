@@ -2,12 +2,10 @@ import spacy
 from itertools import filterfalse
 
 
-BASIC_LAGNUAGE_MODEL = 'en_core_web_sm'
-DEFAULT_LANGUAGE_MODEL = 'xx_ent_wiki_sm'
+DEFAULT_LANGUAGE_MODEL = 'en_core_web_sm'
 
 
 def tokenize(text, language_model=DEFAULT_LANGUAGE_MODEL, lemmatize=True, remove_stopwords=True):
-    spacy.load(BASIC_LAGNUAGE_MODEL)
     nlp = spacy.load(language_model)
     
     is_stopword = lambda x: remove_stopwords and x.norm_ in spacy.lang.en.stop_words.STOP_WORDS
@@ -19,7 +17,6 @@ def tokenize(text, language_model=DEFAULT_LANGUAGE_MODEL, lemmatize=True, remove
 
 
 def sentencizer(text, language_model=DEFAULT_LANGUAGE_MODEL):
-    spacy.load(BASIC_LAGNUAGE_MODEL)
     nlp = spacy.load(language_model)
     nlp.add_pipe(nlp.create_pipe('sentencizer'))
 

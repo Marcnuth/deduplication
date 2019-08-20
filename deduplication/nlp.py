@@ -18,6 +18,6 @@ def tokenize(text, language_model=DEFAULT_LANGUAGE_MODEL, lemmatize=True, remove
 
 def sentencizer(text, language_model=DEFAULT_LANGUAGE_MODEL):
     nlp = spacy.load(language_model)
-    nlp.add_pipe(nlp.create_pipe('sentencizer'))
+    nlp.add_pipe(nlp.create_pipe('sentencizer'), before="parser")
 
     yield from map(lambda x: x.text.strip(), nlp(text).sents)

@@ -1,4 +1,4 @@
-from deduplication import simhash
+from deduplication import simhash, lsimhash
 from pathlib import Path
 from scipy.spatial.distance import hamming
 import numpy as np
@@ -9,7 +9,7 @@ def test_main():
     with open(Path(__file__).resolve().parent / 'data' / 'wiki_nlp.txt', 'r') as f:
         content = f.read()
 
-    hval = simhash.simhash(content)
+    hval = lsimhash.lsimhash(content)
     print(hval)
 
 

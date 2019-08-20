@@ -25,6 +25,14 @@ hashvalue1 = simhash('this is text')
 hashvalue2 = simhash('this is another text', n_block=4)
 ```
 
+__L-SimHash__
+
+```python
+from deduplication import lsimhash
+
+hashvalue = lsimhash('this is very long article texts. maybe with a lot of sentences.')
+```
+
 ## Citation
 
 __SimHash__

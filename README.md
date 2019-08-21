@@ -1,4 +1,7 @@
 # deduplication
+
+![PyPI - Downloads](https://img.shields.io/pypi/dw/deduplication?label=PyPI)
+
 Remove duplicate documents via popular algorithms such as SimHash, SpotSig, Shingling, etc.
 
 ## Install
